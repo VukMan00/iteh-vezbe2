@@ -1,5 +1,6 @@
 <?php
 
+
 class User{
     public $id;
     public $username;
@@ -14,7 +15,7 @@ class User{
     }
 
     public static function logInUser($usr,mysqli $conn){
-        $query = "SELECT * FROM user WHERE username=$usr->username AND password = $usr->password";
+        $query = "SELECT * FROM user WHERE username=$usr->username and password = $usr->password";
         //konekcija sa bazom
 
         return $conn->query($query);

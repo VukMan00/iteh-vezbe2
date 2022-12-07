@@ -1,5 +1,6 @@
 <?php
 
+    require "dbBroker.php";
     require "model/user.php";
 
     session_start();
@@ -13,7 +14,7 @@
         //$odgovor = $korisnik->logInUser($uname,$upass,$conn);
         $odg = User::logInUser($korisnik,$conn); // pristup statickim funkcijama preko klase
 
-        if($odg){
+        if($odg->num_rows == 1){
             echo `<script>
             console.log("Uspesno ste se prijavili");
             </script>`;

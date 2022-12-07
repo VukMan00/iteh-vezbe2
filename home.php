@@ -46,9 +46,7 @@
             </tr>
             </thead>
             <tbody>
-            <?php
-            while ($red = $result->fetch_array()) {
-                ?>
+            
                 <tr>
                     <td><?php echo $red["predmet"] ?></td>
                     <td><?php echo $red["katedra"] ?></td>
@@ -61,10 +59,7 @@
                         </label>
                     </td>
 
-                </tr>
-                <?php
-            }
-            ?>
+                </tr>   
             </tbody>
         </table>
         <div class="row" >
@@ -77,7 +72,7 @@
                 <button id="btn-obrisi" class="btn btn-danger" style="background-color: red; border: 1px solid white;">Obrisi</button>
             </div>
 
-            <div class="col-md-2" style="text-align: right>; color:" >
+            <div class="col-md-2" style="text-align: right">
                     <button id="btn-sortiraj" class="btn btn-normal" onclick="sortTable()">Sortiraj</button>
                 </div>
 

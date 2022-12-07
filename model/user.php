@@ -17,7 +17,7 @@ class User{
         $query = "SELECT * FROM user WHERE username=$usr->username AND password = $usr->password";
         //konekcija sa bazom
 
-        return true;
+        return $conn->query($query);
     }
 }
 
